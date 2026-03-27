@@ -266,6 +266,8 @@ The server exposes the following tools:
 
 - `eval-elisp` - Execute arbitrary Elisp expressions safely
 - `get-diagnostics` - Get flycheck/flymake diagnostics from project buffers
+- `citar-get-entry` - Look up a bibliography entry by citation key
+- `citar-search` - Fuzzy-search entries by author/year/title and return the top match's citekey
 
 Tools can be selectively enabled via `mcp-server-emacs-tools-enabled`:
 ```elisp

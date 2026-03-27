@@ -25,6 +25,8 @@ names (symbols) to enable selectively.
 Available tools:
 - `eval-elisp' - Execute arbitrary Elisp expressions
 - `get-diagnostics' - Get flycheck/flymake diagnostics
+- `citar-get-entry' - Look up a bibliography entry by citation key
+- `citar-search' - Fuzzy-search entries by author/year/title and return the top match's citekey
 
 Example: \\='(get-diagnostics) to enable only diagnostics.
 
@@ -35,8 +37,11 @@ LLM clients and cannot be called."
   :group 'mcp-server-emacs-tools)
 
 (defconst mcp-server-emacs-tools--available
-  '((eval-elisp . mcp-server-emacs-tools-eval-elisp)
-    (get-diagnostics . mcp-server-emacs-tools-diagnostics))
+  '(
+    ;; (eval-elisp . mcp-server-emacs-tools-eval-elisp)
+    ;; (get-diagnostics . mcp-server-emacs-tools-diagnostics)
+    (citar-get-entry . mcp-server-emacs-tools-citar)
+    (citar-search . mcp-server-emacs-tools-citar))
   "Alist mapping tool names (symbols) to their feature names.")
 
 ;; Add tools directory to load path
